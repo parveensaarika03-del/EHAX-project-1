@@ -29,11 +29,9 @@ def decrypt(text, key):
             shift = ord(key[j % len(key)]) - 65
 
             if ch.isupper():
-                result += (chr((ord(ch) - 65 - shift) % 26 + 65)
-            e
-
-                           lse:
-                result += chr((ord(ch) - 97 - shift) % 26 + 97
+                result += chr((ord(ch) - 65 - shift) % 26 + 65)
+            else:
+                result += chr((ord(ch) - 97 - shift) % 26 + 97)
 
             j += 1
         else:
@@ -43,12 +41,15 @@ def decrypt(text, key):
 
 
 
-choice = input("Enter e for Encrypt or d for Decrypt: ").upper()
+
+
+
+choice = input("Enter E for Encrypt or D for Decrypt: ").upper()
 choice = choice.strip()
 
 if choice == "E":
 
-    mode = input("Enter t for Text or f for File: ").upper()
+    mode = input("Enter T for Text or F for File: ").upper()
 
     key = input("Enter key: ")
 
@@ -63,7 +64,7 @@ if choice == "E":
 
     elif mode == "F":
 
-        filename = input("Enter file path address: ")
+        filename = input("Enter file relaive path: ")
 
         file = open(filename, "r")
         text = file.read()
@@ -98,7 +99,7 @@ elif choice == "D":
 
     elif mode == "F":
 
-        filename = input("Enter file path address: ")
+        filename = input("Enter file relative: ")
 
         file = open(filename, "r")
         text = file.read()
