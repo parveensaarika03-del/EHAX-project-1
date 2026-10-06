@@ -1,7 +1,7 @@
 **VIGENERE CIPHER**
 
 A SMALL OVERVIEW:
-Vigenère Cipher encrypts each letter by shifting it according to the corresponding letter of a repeating keyword, and decryption reverses the same process.
+Vigenere Cipher encrypts each letter by shifting it according to the corresponding letter of a repeating keyword, and decryption reverses the same process.
 for e.g: lets say our key is 'abcd' , and our message is 'ccccccccccc'
 so our encrypted text will be: 'cdefcdefcde' and decrypted text will be 'cbazcbazcba'
 for 'a' in the key the letter shift by 1
